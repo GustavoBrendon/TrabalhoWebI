@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Clientes</title>
 </head>
-
 <body>
+
+<header id="header">
     <nav>
-        <div>
-            <a href="../index.html">Home</a>
-        </div>
-        <div>
-            <a id="link_login"></a>
-        </div>
+        <section>
+            <h1>Atelie</h1>
+        </section>
+        <ul>
+            <a href="../index.html"><li>Início</li></a>
+            <a href="../autenticacao/logout.html"><li>Deslogar</li></a>
+        </ul>
     </nav>
-    <header>
-        <h1>Clientes</h1>
-    </header>
-    <main>
-        <img src="../imagens/envelope.jpg" alt="">
-        <form>
-            <input type="hidden" name="id" id="id"><br>
-            <label for="nome">Nome</label><br>
-            <input type="text" name="nome" id="nome"><br>
-            <button>Salvar</button>
-        </form>
-        <br>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+    <div>
+        <a id="link_login"></a>
+    </div>
+</header>
+
+    <main id="main">
+        <section>
+            <form>
+                <input type="hidden" name="id" id="id"><br>
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" id="nome"><br>
+                <button>Salvar</button>
+            </form>
+            <br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
     </main>
+
     <footer>
         &copy; GustavoBrendon.
-    </footer>
+    </footer> 
 </body>
 <script src="./clientes.js" type="module"></script>
-
 </html>

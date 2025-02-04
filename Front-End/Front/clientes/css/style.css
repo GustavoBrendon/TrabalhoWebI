@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #78350F;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #78350F;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
+  
+  header nav ul a:hover {
+    background-color: #5a280b;
+    border-radius: 8px;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+  
+  form {
+    margin: auto;
+    background-color: #fbe9e7;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  form label {
+    font-weight: bold;
+    color: #78350F;
+  }
+  
+  form input[type="text"],
+  form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  form button {
+    background-color: #78350F;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #5a280b;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #78350F;
+    color: white;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #link_login {
+    background-color: #78350F;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  #link_login:hover {
+    background-color: #5a280b;
+  }
+  
+
+  footer {
+    background-color: #78350F;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  

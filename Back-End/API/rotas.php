@@ -8,8 +8,9 @@ session_set_cookie_params(["samesite" => 'strict']);
 session_start();
 
 $uri = explode('/', $_SERVER['REQUEST_URI']);
-$mod = $uri[2];
-$acao = $uri[3];
+// var_dump($uri);
+$mod = $uri[3];
+$acao = $uri[4];
 $classeControle = 'Controle' . ucfirst($mod);
 
 // Rever estrutura

@@ -2,7 +2,7 @@ import { URL_BASE_API } from '../constantes/urls.js';
 import { checkSeLogadoNaApiEMontaLink } from '../autenticacao/check.js';
 
 async function buscaDaApiExibeNaTabela() {
-    const res = await fetch(`${URL_BASE_API}/clientes/listar`);
+    const res = await fetch(`${URL_BASE_API}/carta/listar`);
     const data = await res.json();
     const tbody = document.querySelector('tbody');
     tbody.innerHTML = '';
@@ -20,7 +20,7 @@ async function buscaDaApiExibeNaTabela() {
         btEx.addEventListener('click', solicitaExclusaoDoCliente);
         td1.innerText = data[i].nome;
         td2.append(btEd, btEx);
-        tr.append(td1, td2, td3);
+        tr.append(td1, td2);
         tbody.append(tr);
     }
 }
@@ -33,7 +33,7 @@ async function preencheDadosParaEdicao(e) {
         method: 'post',
         body: dados
     };
-    const res = await fetch(`${URL_BASE_API}/clientes/um`, opt);
+    const res = await fetch(`${URL_BASE_API}/carta/um`, opt);
     const data = await res.json();
     console.log(data);
     document.forms[0].id.value = data.id;
@@ -46,13 +46,13 @@ async function enviaDadosParaCadastroOuEdicaoNaApi(e) {
         method: 'post',
         body: new FormData(e.target)
     };
-    let op = '';
+    let op = '';        
     if (document.forms[0].id.value) {
         op = 'editar';
     } else {
         op = 'inserir';
     }
-    const res = await fetch(`${URL_BASE_API}/clientes/${op}`, opt);
+    const res = await fetch(`${URL_BASE_API}/carta/${op}`, opt);
     const data = await res.json();
     e.target.reset();
     document.forms[0].id.value = '';
@@ -67,7 +67,7 @@ async function solicitaExclusaoDoCliente(e) {
         method: 'post',
         body: dados
     };
-    const res = await fetch(`${URL_BASE_API}/clientes/excluir`, opt);
+    const res = await fetch(`${URL_BASE_API}/carta/excluir`, opt);
     const data = await res.json();
     alert(data.status);
     buscaDaApiExibeNaTabela();

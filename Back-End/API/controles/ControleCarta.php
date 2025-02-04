@@ -26,13 +26,11 @@ class ControleCarta {
 
     public function inserir() {
         $sql = 
-        'insert into clientes (nome, descricao)
-        values (?, ?)';
+        'insert into clientes (nome)
+        values (?)';
         $nome = filter_input(INPUT_POST, 'nome');
-        $descricao = filter_input(INPUT_POST, 'descricao');
         $preparado = Conexao::preparaComando($sql);
         $preparado->bindValue(1, $nome);
-        $preparado->bindValue(2, $descricao);
         if($preparado->execute()){
             return ['status' => 'Gravou'];
         } else {
@@ -57,7 +55,7 @@ class ControleCarta {
     }
 
     public function excluir() {
-        $sql = 'delete from cartas where id = ?';
+        $sql = 'delete from clientes where id = ?';
         $id = filter_input(INPUT_POST, 'id');
         $preparado = Conexao::preparaComando($sql);
         $preparado->bindValue(1, $id);

@@ -16,4 +16,15 @@ async function enviaDadosParaLoginNaAPI(e) {
     }
 }
 
+document.getElementById('btn2').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const opt = {
+        method: 'post'
+    };
+    const res = await fetch(`${URL_BASE_API}/autenticacao/padrao`, opt);
+    const json = await res.text();
+    alert(json);
+});
+
+
 document.forms[0].addEventListener('submit', enviaDadosParaLoginNaAPI);

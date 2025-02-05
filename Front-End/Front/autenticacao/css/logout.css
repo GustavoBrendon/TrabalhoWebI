@@ -1,0 +1,112 @@
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+header {
+    padding: 8px;
+    height: auto;
+    background-color: #000;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     a {
+        padding: 8px;
+        border-radius: 8px;
+        list-style: none;
+        text-decoration: none;
+        color: #eee;
+        background-color: #000;
+        transition: .5s;
+    }
+
+    a:hover {
+        cursor: pointer;
+        background-color: #eee;
+        color: #000;
+    }
+}
+
+main {
+    height: 92vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    nav {
+        border: 1px solid black;
+        background-color: #000;
+        color: #eee;
+        padding: 32px;
+        border-radius: 8px;
+        box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+     
+    a {
+        list-style: none;
+        text-decoration: none;
+        color: #000;
+        background-color: #eee;
+        border-radius: 8px;
+        padding: 8px;
+        transition: .5s;
+    }
+
+    a:hover {
+        cursor: pointer;
+        background-color: #000;
+        color: #eee;
+    }
+}
+
+#sobre {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fafdff;
+    background-color: #000;
+    gap: 80px;
+  
+    .div1 {
+      width: 300px;
+      height: auto;
+      text-align: justify;
+  
+      h2 {
+        text-align: center;
+      }
+    }
+  
+    .div2 {
+      width: 300px;
+      height: auto;
+  
+      .fa-brands {
+        font-size: 2rem;
+        transition: 0.5s;
+      }
+  
+      .fa-brands:hover {
+        cursor: pointer;
+        color: #4c4c4c;
+      }
+    }
+  }

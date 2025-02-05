@@ -1,37 +1,45 @@
-/* Reset básico */
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
-    color: #78350F;
+    color: #eee;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #78350F;
-    color: white;
+    background-color: #000;
+    color: #eee;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 header a {
-    color: white;
+    color: #eee;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: .5s;
 }
 
 header a:hover {
-    background-color: #5a280b;
-    border-radius: 8px;
+    background-color: #eee;
+    color: #000;
 }
 
 main {
@@ -42,7 +50,7 @@ main {
 }
 
 form {
-    background-color: #fbe9e7;
+    background-color: #000;
     padding: 1.5rem;
     border-radius: 8px;
     max-width: 400px;
@@ -68,34 +76,65 @@ form button {
 }
 
 form button {
-    background-color: #78350F;
-    color: white;
+    background-color: #eee;
+    color: #000;
     border: none;
     cursor: pointer;
+    transition: .5s;
 }
 
 form button:hover {
-    background-color: #5a280b;
+    background-color: #000;
+    color: #eee;
 }
 
 button#btn2 {
     background-color: transparent;
-    border: 2px solid #78350F;
-    color: #78350F;
+    border: 2px solid #000;
+    background-color: #000;
+    color: #eee;
     padding: 0.75rem;
     border-radius: 8px;
     cursor: pointer;
+    transition: .5s;
 }
 
 button#btn2:hover {
-    background-color: #78350F;
-    color: white;
+    background-color: #eee;
+    color: #000;
 }
 
-footer {
-    background-color: #78350F;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
+#sobre {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fafdff;
+    background-color: #000;
+    gap: 80px;
+  
+    .div1 {
+      width: 300px;
+      height: auto;
+      text-align: justify;
+  
+      h2 {
+        text-align: center;
+      }
+    }
+  
+    .div2 {
+      width: 300px;
+      height: auto;
+  
+      .fa-brands {
+        font-size: 2rem;
+        transition: 0.5s;
+      }
+  
+      .fa-brands:hover {
+        cursor: pointer;
+        color: #4c4c4c;
+      }
+    }
+  }

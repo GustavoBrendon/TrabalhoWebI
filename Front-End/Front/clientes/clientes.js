@@ -12,10 +12,10 @@ async function buscaDaApiExibeNaTabela() {
         const td2 = document.createElement('td');
         const btEd = document.createElement('button');
         const btEx = document.createElement('button');
-        btEd.innerText = 'edi';
+        btEd.innerText = 'Editar';
         btEd.setAttribute('data-id', data[i].id);
         btEd.addEventListener('click', preencheDadosParaEdicao);
-        btEx.innerText = 'del';
+        btEx.innerText = 'Deletar';
         btEx.setAttribute('data-id', data[i].id);
         btEx.addEventListener('click', solicitaExclusaoDoCliente);
         td1.innerText = data[i].nome;

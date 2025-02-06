@@ -31,7 +31,7 @@ Este repositório contém o trabalho desenvolvido para a disciplina de Web I no 
 2. **Configuração do XAMPP**:
 
    - Certifique-se de que o XAMPP está instalado e configurado corretamente.
-   - Ative os módulo `Apache` no painel de controle do XAMPP.
+   - Ative o módulo `Apache` no painel de controle do XAMPP.
 
 3. **Back-End**:
 

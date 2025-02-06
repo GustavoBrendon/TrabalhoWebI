@@ -211,16 +211,18 @@ section {
 #sobre {
   min-height: 60vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: #fafdff;
   background-color: #000;
-  gap: 80px;
+  gap: 200px;
 
   .div1 {
-    width: 300px;
+    width: 500px;
     height: auto;
+    display: flex;
+    flex-direction: column;
     text-align: justify;
+    margin-left: 250px;
 
     h2 {
       text-align: center;
@@ -230,6 +232,7 @@ section {
   .div2 {
     width: 300px;
     height: auto;
+   
 
     .fa-brands {
       font-size: 2rem;
@@ -241,4 +244,27 @@ section {
       color: #4c4c4c;
     }
   }
+}
+
+#btn-for-top {
+  position: fixed;
+  right: 90px;
+  bottom: 60px;
+}
+
+#btn-for-top {
+  cursor: pointer;
+  background-color: #5b5959;
+  color: #eee;
+  position: fixed;
+  width: 150px;
+  border: none;
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #5b5959 0px 7px 2px, #5b5959 0px 8px 5px;
 }

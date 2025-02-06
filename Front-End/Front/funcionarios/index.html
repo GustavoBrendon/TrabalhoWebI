@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Clientes</title>
+    <title>Funcionários</title>
   </head>
   <body>
     <header id="header">
       <nav>
         <section>
           <h1><i class="fa-solid fa-scissors"></i> Ateliê das Mãos</h1>
-          <h2>Clientes</h2>
+          <h2>Funcionários</h2>
         </section>
         <ul>
           <a href="../index.html"><li>Início</li></a>
@@ -28,6 +28,8 @@
           <input type="hidden" name="id" id="id" /><br />
           <label for="nome">Nome</label><br />
           <input type="text" name="nome" id="nome" /><br />
+          <label for="nome">Salário</label><br />
+          <input type="text" name="salario" id="salario" /><br />
           <button>Salvar</button>
         </form>
         <br />
@@ -35,6 +37,7 @@
           <thead>
             <tr>
               <th>Nome</th>
+              <th>Salário</th>
               <th>Ações</th>
             </tr>
           </thead>
@@ -77,5 +80,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <script src="./clientes.js" type="module"></script>
+  <script src="./funcionarios.js" type="module"></script>
 </html>

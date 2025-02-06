@@ -10,13 +10,6 @@
   scroll-behavior: smooth;
 }
 
-
-/* Scroll Reveal */
-
-.section_reveal {
-  visibility: hidden;
-}
-
 header {
   background-color: #000;
   color: white;
@@ -169,4 +162,10 @@ table tbody tr:nth-child(even) {
       color: #4c4c4c;
     }
   }
+}
+
+/* scrollreveal */
+
+.section_reveal {
+  visibility: hidden;
 }

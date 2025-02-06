@@ -1,6 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `trabalhowebi`;
+CREATE DATABASE  IF NOT EXISTS `ateliedasmaos`;
 
-USE `trabalhowebi`;
+USE `ateliedasmaos`;
 
 DROP TABLE IF EXISTS `usuarios`;
 
@@ -25,17 +25,25 @@ CREATE TABLE `produtos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(128) DEFAULT NULL,
   `quantidade` varchar(256) DEFAULT NULL,
-  `preço` varchar(256) DEFAULT NULL,
+  `preco` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
-DROP TABLE IF EXISTS `vendas`;
+DROP TABLE IF EXISTS `materiais`;
 
-DROP TABLE IF EXISTS `relatorios`;
-
-CREATE TABLE `relatorios` (
+CREATE TABLE `materiais` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `saídas` varchar(128) DEFAULT NULL,
-  `entradas` varchar(256) DEFAULT NULL,
+  `nome` varchar(256) DEFAULT NULL,
+  `custo` varchar(128) DEFAULT NULL,
+  `quantidade` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+
+DROP TABLE IF EXISTS `funcionarios`;
+
+CREATE TABLE `funcionarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(256) DEFAULT NULL,
+  `salario` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;

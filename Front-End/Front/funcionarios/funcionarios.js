@@ -2,7 +2,7 @@ import { URL_BASE_API } from '../constantes/urls.js';
 import { checkSeLogadoNaApiEMontaLink } from '../autenticacao/check.js';
 
 async function buscaDaApiExibeNaTabela() {
-    const res = await fetch(`${URL_BASE_API}/clientes/listar`);
+    const res = await fetch(`${URL_BASE_API}/funcionarios/listar`);
     const data = await res.json();
     const tbody = document.querySelector('tbody');
     tbody.innerHTML = '';
@@ -10,6 +10,7 @@ async function buscaDaApiExibeNaTabela() {
         const tr = document.createElement('tr');
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
         const btEd = document.createElement('button');
         const btEx = document.createElement('button');
         btEd.innerText = 'Editar';
@@ -19,8 +20,9 @@ async function buscaDaApiExibeNaTabela() {
         btEx.setAttribute('data-id', data[i].id);
         btEx.addEventListener('click', solicitaExclusaoDoCliente);
         td1.innerText = data[i].nome;
-        td2.append(btEd, btEx);
-        tr.append(td1, td2);
+        td2.innerText = data[i].salario;
+        td3.append(btEd, btEx);
+        tr.append(td1, td2, td3);
         tbody.append(tr);
     }
 }
@@ -34,11 +36,12 @@ async function preencheDadosParaEdicao(e) {
         method: 'post',
         body: dados
     };
-    const res = await fetch(`${URL_BASE_API}/clientes/um`, opt);
+    const res = await fetch(`${URL_BASE_API}/funcionarios/um`, opt);
     const data = await res.json();
     console.log(data);
     document.forms[0].id.value = data.id;
     document.forms[0].nome.value = data.nome;
+    document.forms[0].salario.value = data.salario;
 }
 
 async function enviaDadosParaCadastroOuEdicaoNaApi(e) {
@@ -53,7 +56,7 @@ async function enviaDadosParaCadastroOuEdicaoNaApi(e) {
     } else {
         op = 'inserir';
     }
-    const res = await fetch(`${URL_BASE_API}/clientes/${op}`, opt);
+    const res = await fetch(`${URL_BASE_API}/funcionarios/${op}`, opt);
     const data = await res.json();
     e.target.reset();
     document.forms[0].id.value = '';
@@ -68,7 +71,7 @@ async function solicitaExclusaoDoCliente(e) {
         method: 'post',
         body: dados
     };
-    const res = await fetch(`${URL_BASE_API}/clientes/excluir`, opt);
+    const res = await fetch(`${URL_BASE_API}/funcionarios/excluir`, opt);
     const data = await res.json();
     alert(data.status);
     buscaDaApiExibeNaTabela();
@@ -79,6 +82,7 @@ window.addEventListener('pageshow', () => {
     checkSeLogadoNaApiEMontaLink(document.querySelector('#link_login'));
     buscaDaApiExibeNaTabela();
 });
+
 
 // ScrollReveal
 

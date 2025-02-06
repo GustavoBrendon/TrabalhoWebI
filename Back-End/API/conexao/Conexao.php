@@ -1,7 +1,7 @@
 <?php
 class Conexao
 {
-    private static $dsn = 'mysql:host=localhost;port=3306;dbname=trabalhowebi';
+    private static $dsn = 'mysql:host=localhost;port=3306;dbname=ateliedasmaos';
     private static $usuario = 'root';
     private static $senha = 'root';
     private static $conexao = null;

@@ -105,36 +105,39 @@ button#btn2:hover {
 }
 
 #sobre {
-    min-height: 60vh;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: #fafdff;
+  background-color: #000;
+  gap: 200px;
+
+  .div1 {
+    width: 500px;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fafdff;
-    background-color: #000;
-    gap: 80px;
-  
-    .div1 {
-      width: 300px;
-      height: auto;
-      text-align: justify;
-  
-      h2 {
-        text-align: center;
-      }
-    }
-  
-    .div2 {
-      width: 300px;
-      height: auto;
-  
-      .fa-brands {
-        font-size: 2rem;
-        transition: 0.5s;
-      }
-  
-      .fa-brands:hover {
-        cursor: pointer;
-        color: #4c4c4c;
-      }
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 250px;
+
+    h2 {
+      text-align: center;
     }
   }
+
+  .div2 {
+    width: 300px;
+    height: auto;
+   
+
+    .fa-brands {
+      font-size: 2rem;
+      transition: 0.5s;
+    }
+
+    .fa-brands:hover {
+      cursor: pointer;
+      color: #4c4c4c;
+    }
+  }
+}

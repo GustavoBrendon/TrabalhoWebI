@@ -1,5 +1,8 @@
 <?php
-require_once './controles/ControleCarta.php';
+require_once './controles/ControleClientes.php';
+require_once './controles/ControleProdutos.php';
+require_once './controles/ControleFuncionarios.php';
+require_once './controles/ControleMateriais.php';
 require_once './controles/ControleAutenticacao.php';
 
 header('Content-type: application/json');
@@ -8,7 +11,6 @@ session_set_cookie_params(["samesite" => 'strict']);
 session_start();
 
 $uri = explode('/', $_SERVER['REQUEST_URI']);
-// var_dump($uri);
 $mod = $uri[3];
 $acao = $uri[4];
 $classeControle = 'Controle' . ucfirst($mod);
